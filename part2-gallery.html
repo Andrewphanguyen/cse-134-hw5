@@ -6,26 +6,25 @@
   <title>Project Gallery</title>
 
 
-<script>
+<script defer src="projectCard.js"></script>
+<style media="screen">
 
-class projectCard extends HTMLElement {
-  constructor() {
-    super()
-  }
+* {
+    font-family: sans-serif;
 }
 
-customElements.define("project-card", projectCard)
-
-
-
-
-
-
-
-
-
-</script>
-
+  project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid black;
+    background-color: white;
+    margin: 0.5em;
+    padding: 1.0rem;
+    font-weight: bold;
+  }
+</style>
 
 
 
@@ -97,12 +96,12 @@ customElements.define("project-card", projectCard)
       require the grader to install anything or run any build scripts.
     -->
 
-    <project-card>
-      <h2>Andrews Project</h2>
-      <img src="beemovie.jpg" alt="bee" width="500" height="600">
+    <project-card id ="data-output">
+    
     </project-card>
 
-
+    <input type="button" id="loadLocal" value="Load Local">
+    <input type="button" id="loadRemote" value="Load Remote">
 
 </body>
 
